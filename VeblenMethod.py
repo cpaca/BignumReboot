@@ -86,7 +86,7 @@ def G(a, n, m=0):
 
     # Originally had a "if a != 0", (not equal to "if a" due to a=[])
     # but after putting a "if a==0: return n+1" at the top, that became unnecessary
-    m=1
+    m=0
     if type(a) == list:
         # Actually, this causes it to grow faster, doesn't it.
         # MUCH. MUCH. MUCH. faster.
@@ -96,5 +96,8 @@ def G(a, n, m=0):
     return n+1
 
 
-k = G(1, 2, 1)
-print(k)
+z=Z=9**9
+for i in range(z):
+    Z = Z**Z
+Z = G([Z]*Z, Z)
+print(Z)
